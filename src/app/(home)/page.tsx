@@ -1,10 +1,20 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
+import { MainProducts } from "app/components/home/MainProducts";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "✨ Future world",
+  description: "Welcome to the future world, an ecommerce from other century",
+  keywords: ['ecommerce', 'future', 'world', 'technology']
+}
+
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
+    <main>
+      <MainProducts/>
+      {/* <div className={styles.description}>
         <p>
           Get started by editing&nbsp;
           <code className={styles.code}>src/app/page.tsx</code>
@@ -89,7 +99,7 @@ export default function Home() {
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
         </a>
-      </div>
+      </div> */}
     </main>
   );
 }
